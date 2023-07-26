@@ -35,13 +35,9 @@ int main(void)
 		}
 		args[track] = NULL;
 		if (track == 0)
-		{
 			continue;
-		}
 		if (strcmp(args[0], "exit") == 0)
-		{
 			break;
-		}
 		pid = fork();
 		if (pid == 0)
 		{
