@@ -5,14 +5,18 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+/**
+ * main - check the code
+ *
+ * Return: Nothing.
+ */
+
 int main(void)
 {
 	pid_t pid;
-	char *token;
+	char *token, *buf = NULL, *args[64];
 	int track;
 	size_t size;
-	char *buf = NULL;
-	char *args[64];
 
 	while (1)
 	{
