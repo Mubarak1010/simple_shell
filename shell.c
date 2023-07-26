@@ -36,7 +36,7 @@ int main(void)
 		if (track == 0)
 			continue;
 		if (strcmp(args[0], "exit") == 0)
-			break;
+			exit(1);
 		pid = fork();
 		if (pid == 0)
 		{
