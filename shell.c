@@ -16,6 +16,7 @@ int main(void)
 	pid_t pid;
 	char *token, *buf = NULL, *args[64];
 	size_t size, track;
+	extern char **environ;
 
 	while (1)
 	{
@@ -40,7 +41,7 @@ int main(void)
 		pid = fork();
 		if (pid == 0)
 		{
-			if (execve(args[0], args, NULL) == -1)
+			if (execve(args[0], args, environ) == -1)
 			{
 				perror("./shell");
 				exit(1);
