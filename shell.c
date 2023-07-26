@@ -15,8 +15,7 @@ int main(void)
 {
 	pid_t pid;
 	char *token, *buf = NULL, *args[64];
-	int track;
-	size_t size;
+	size_t size, track;
 
 	while (1)
 	{
@@ -48,13 +47,9 @@ int main(void)
 			}
 		}
 		else if (pid < 0)
-		{
 			perror("fork");
-		}
 		else
-		{
 			wait(NULL);
-		}
 	}
 	free(buf);
 	return (0);
